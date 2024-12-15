@@ -1,5 +1,3 @@
-# mini-project-1-template
-
 # How to Run
 
 1. **Compile the project**:
@@ -13,52 +11,6 @@
      ```bash
      ./a.out
      ```
-
-# Assumptions
-
-## 1. File and Command Limits
-- Filenames have a maximum length of **4000 characters**.
-- Commands can be a maximum of **256 characters** long.
-
-## 2. Error Logging
-- Erroneous commands are stored in a log file.
-- The log file is stored as an absolute path at `.shell_logs/command.log`.
-- **Note:** While running the shell for the first time, you may see the message "Error opening log file for trimming: No such file or directory." This is not an actual error but occurs because the log directory cannot be located initially. Everything works as expected despite this message.
-
-
-## 3. `hop` Command Behavior
-- The previous directory is updated with every individual directory hopped to.
-
-## 4. Colored Output
-- Only the **file names**, **directory names**, and **error statements** are displayed with color.
-
-## 5. Command Execution and Logging
-- If the same command is run twice in a single session, the time of the latter command is logged **only if it exceeds 2 seconds**.
-- Aliases in `.myshrc` are defined **without** the keyword `alias`.
-- Alias usage is also logged.
-
-## 6. Process Management
-- The PID of erroneous background commands is shown.
-- Background processes for custom-coded commands are **ignored**.
-- The shell handles `fg` correctly by showing the process name and the time it ran in the foreground after being brought from the background.
-- **`proclore`** is run as a background process with an **unknown name**, and it prints the **exit status** when the `x` key is pressed.
-
-## 7. File Permission Handling
-- If permission is denied for a file, an error message is displayed using `perror`.
-
-## 8. Piping and Background Processes
-- Pipes are executed sequentially.
-- The background process flag (`&`) only applies to the **last command** in a piped sequence.
-
-## 9. Process States
-- A process is considered **stopped** if its state is `T`, otherwise it is considered **running**.
-
-## 10. Signal Handling
-- **Ctrl+C** (SIGINT) does not work when no foreground process is running.
-- **Ctrl+D** (EOF) kills all processes but does not print an exit status.
-
-## 11. Error Messages
-- All errors are printed using `perror`.
 
 # Custom Shell Project
 
